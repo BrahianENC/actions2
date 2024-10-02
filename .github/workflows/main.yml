@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-lastest
 
     steps:
-      - name: ls
-        run: ls -al
+      - name: ls # Instalar paquetes
+        run: | # directiva pipe que permite generar string multilinea
+          echo "Hola mundo" >> hola.txt
+          cat hola.txt
