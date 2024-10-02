@@ -7,7 +7,11 @@ jobs:
     runs-on: ubuntu-lastest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.0 # Se usa para utilizar los archivos del repositorio
+  
       - name: ls # Instalar paquetes
-        run: | # directiva pipe que permite generar string multilinea
-          echo "Hola mundo" >> hola.txt
-          cat hola.txt
+        run: | # directiva pipe que permite generar string multilinea ejm: apt-get install
+          chmod +x script.sh  
+          ./script.sh
+        # modificar y agregar permisos de ejecucion, despues ejecutar
